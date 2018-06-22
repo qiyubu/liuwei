@@ -37,7 +37,7 @@
     </div>
     <el-container>
       <router-view></router-view>
-      <el-footer class="footer">11</el-footer>
+      <el-footer class="footer" style="height: 400px">11</el-footer>
     </el-container>
   </div>
 </template>
@@ -48,6 +48,12 @@ export default {
     return {
       activeIndex2: 'about'
     }
+  },
+  created () {
+    console.log('测试')
+    this.scrollDir(function (dir) {
+      console.log(dir)
+    })
   },
   methods: {
     handleSelect (key, keyPath) {
@@ -60,6 +66,8 @@ export default {
 <style scoped lang="scss">
   .menuWrap{
     background-color: rgb(84, 92, 100);
+    position: fixed;
+    top:0;
   }
 .indexMenu{
   width: 1200px;
