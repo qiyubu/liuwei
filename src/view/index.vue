@@ -37,7 +37,34 @@
     <!--</div>-->
     <el-container>
       <router-view></router-view>
-      <el-footer class="footer" style="height: 400px">11</el-footer>
+      <el-footer class="footer" style="height: 400px">
+        <div class="contactWrap">
+          <div class="contact">
+            <div class="contactItem">
+              <img class="logo" src="../assets/logo.png" alt="">
+            </div>
+            <div class="contactItem program">
+              <h1>我们的项目</h1>
+              <p>测试项目</p>
+              <p>测试项目2</p>
+            </div>
+            <div class="contactItem aboutUs">
+              <h1>关于我们</h1>
+              <p>Email:12628685@qq.com</p>
+              <p>地址： 上海市乌鲁木齐</p>
+            </div>
+          </div>
+        </div>
+        <div class="wechatWrap">
+          <div class="wechat">
+            <p>关注我们</p>
+            <img class="wechatImg" src="" alt="">
+          </div>
+        </div>
+        <div class="copyrightWrap">
+          copyright
+        </div>
+      </el-footer>
     </el-container>
   </div>
 </template>
@@ -65,6 +92,9 @@ export default {
 
 <style scoped lang="scss">
   #index{
+    .el-footer{
+      padding: 0;
+    }
     padding-top: 60px;
     .el-menu--horizontal {
       border: none;
@@ -87,6 +117,63 @@ export default {
         left: 0;
         top: 0;
         height: 60px;
+      }
+    }
+  }
+  .footer{
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .contactWrap{
+    width: 100%;
+    background-color:#172132;
+    border-bottom: 1px solid #40444f;
+    .contact{
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      .program{
+        margin-left: 140px;
+        padding-top: 20px;
+        h1{
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+      .aboutUs{
+        margin-left: 140px;
+        padding-top: 20px;
+        h1{
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+      .contactItem{
+        color: white;
+        text-align: left;
+        font-size: 12px;
+        .logo{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .wechatWrap{
+    width: 100%;
+    background-color:#172132;
+    border-bottom: 1px solid #40444f;
+    .wechat{
+      width: 1200px;
+      margin:0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      p{
+        padding-top: 20px;
+        font-size: 14px;
+        color: white;
       }
     }
   }
